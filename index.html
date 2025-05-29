@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Phish Concerts throughout the years</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+    crossorigin=""
+  />
+  <!-- My CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <script 
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+    crossorigin=""
+  ></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet.fullscreen@1.6.0/Control.FullScreen.css"
+  />
+  <script
+    src="https://unpkg.com/leaflet.fullscreen@1.6.0/Control.FullScreen.js"
+  ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <link href="css/Leaflet.AnimatedSearchBox.css" rel="stylesheet">
+  <script src="js/LeafletAnimatedSearchBox.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@5.0.10-beta/dist/fuse.min.js"></script>
+
+
+
+  <!--Link to JS-->
+  <script src="map_init.js" defer></script>
+
+</head>
+<body>
+<div id="container">
+  <!-- Header with title and year slider -->
+  <div id="header">
+    <h1>Phish Concerts in the 90s</h1>
+    <div id="year-controls">
+      <div class="year-slider-container">
+        <label for="yearSlider"><i class="fas fa-calendar-alt"></i> Year:</label>
+        <input type="range" id="yearSlider" name="yearSlider" min="1990" max="1992" step="1" value="1990">
+        <span id="yearValue">1990</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main content area -->
+  <div id="main-content">
+    <div id="maparea">
+      <div id="map1" class="map-box"></div>
+    </div>
+    
+    <div id="sidebar">
+      <div id="info-panel">
+        <div class="info-card">
+          <h3><i class="fas fa-music"></i> Concert Information</h3>
+          <p>Explore Phish concerts from the early 1990s using the year slider above. Click on markers to see venue details and setlist information.</p>
+          
+        <div class="concert-stats">
+          <div class="stat-item">
+            <span class="stat-number" id="concertCount">0</span>
+            <span class="stat-label">Concerts</span>
+          </div>
+        </div>
+        </div>
+        
+        <div class="info-card">
+          <h3><i class="fas fa-map-marker-alt"></i> Navigation</h3>
+          <p>Use the map controls to zoom and pan. The fullscreen button provides an immersive viewing experience.</p>
+        </div>
+      </div>
+      
+      <footer>
+        <hr>
+        <p>This project is based on the final project for <em>GTECH 78520</em>, offered at CUNY Hunter College.<br>
+      </footer>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
