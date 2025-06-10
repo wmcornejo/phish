@@ -66,7 +66,7 @@ function getTooltipContent(props, year) {
     `;
 }
 
-$.getJSON('data/us_concerts.geojson', function (data) {
+$.getJSON('data/us_concerts3.geojson', function (data) {
     fullData = data;
 
     dataLayer = L.geoJSON(data, {

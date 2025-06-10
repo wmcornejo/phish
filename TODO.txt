@@ -1,0 +1,5 @@
+to add:
+as many years as you can
+zoom to state when clicked, and remove state layer and show point layer for state
+get every years venues as points as csv files
+could get time data and make an animation of where they went for each year

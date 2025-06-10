@@ -42,11 +42,11 @@
 <div id="container">
   <!-- Header with title and year slider -->
   <div id="header">
-    <h1>Phish Concerts in the 90s</h1>
+    <h1>A Geographic Analysis of Phish Tours (1990-97)</h1>
     <div id="year-controls">
       <div class="year-slider-container">
         <label for="yearSlider"><i class="fas fa-calendar-alt"></i> Year:</label>
-        <input type="range" id="yearSlider" name="yearSlider" min="1990" max="1992" step="1" value="1990">
+        <input type="range" id="yearSlider" name="yearSlider" min="1990" max="1997" step="1" value="1990">
         <span id="yearValue">1990</span>
       </div>
     </div>
@@ -61,20 +61,28 @@
     <div id="sidebar">
       <div id="info-panel">
         <div class="info-card">
-          <h3><i class="fas fa-music"></i> Concert Information</h3>
-          <p>Explore Phish concerts from the early 1990s using the year slider above. Click on markers to see venue details and setlist information.</p>
+          <h3><i class="fas fa-music"></i> Phish in the 90s</h3>
+          <p>Phish, one of America's most iconic rock bands, 
+            is known for their creative and improvisational concerts. 
+            In NYC, every year during Christmas, tons of tickets sell out for Phish’s 
+            5 day shows at Madison Square Garden. During the early 1990s, the band 
+            gained a ton of popularity. This report analyzes Phish’s concert locations 
+            during 1990-92, when the band began touring nationally. Using web-scraped 
+            data from <a href="https://phish.com/tours/">https://phish.com/tours/</a>, 
+            along with spatial techniques in R, I visualized the growth of Phish across
+            the contiguous US until 1997.  </p>
           
-        <div class="concert-stats">
-          <div class="stat-item">
-            <span class="stat-number" id="concertCount">0</span>
-            <span class="stat-label">Concerts</span>
-          </div>
-        </div>
+
         </div>
         
         <div class="info-card">
-          <h3><i class="fas fa-map-marker-alt"></i> Navigation</h3>
-          <p>Use the map controls to zoom and pan. The fullscreen button provides an immersive viewing experience.</p>
+          <h3><i class="fas fa-map-marker-alt"></i> Statistics</h3>
+          <div class="concert-stats">
+          <div class="stat-item">
+            <span class="stat-number" id="concertCount">147</span>
+            <span class="stat-label">Concerts</span>
+          </div>
+        </div>
         </div>
       </div>
       
